@@ -1,18 +1,12 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-
-const StyledLayoutMain = styled.main`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-`
+import * as React from 'react';
+import layoutMainStyles from './LayoutMain.module.scss';
 
 interface LayoutMainProps {
-  className?: string
+  className?: string;
 }
 
-const LayoutMain: React.SFC<LayoutMainProps> = ({ children, className }) => (
-  <StyledLayoutMain className={className}>{children}</StyledLayoutMain>
-)
+const LayoutMain: React.SFC<LayoutMainProps> = ({ className, ...props }) => (
+  <div className={`${className} ${layoutMainStyles.layoutMain}`} {...props} />
+);
 
-export default LayoutMain
+export default LayoutMain;

@@ -1,46 +1,21 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import { transparentize } from 'polished'
-import { Link } from 'gatsby'
-
-import { heights, dimensions, colors } from '../styles/variables'
-import Container from './Container'
-
-const StyledHeader = styled.header`
-  height: ${heights.header}px;
-  padding: 0 ${dimensions.containerPadding}rem;
-  background-color: ${colors.brand};
-  color: ${transparentize(0.5, colors.white)};
-`
-
-const HeaderInner = styled(Container)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
-`
-
-const HomepageLink = styled(Link)`
-  color: ${colors.white};
-  font-size: 1.5rem;
-  font-weight: 600;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-`
+import * as React from 'react';
+import { Link } from 'gatsby';
+import Container from './Container';
+import headerStyles from './Header.module.scss';
 
 interface HeaderProps {
-  title: string
+  title: string;
+  className?: string;
 }
 
-const Header: React.SFC<HeaderProps> = ({ title }) => (
-  <StyledHeader>
-    <HeaderInner>
-      <HomepageLink to="/">{title}</HomepageLink>
-    </HeaderInner>
-  </StyledHeader>
-)
+const Header: React.SFC<HeaderProps> = ({ title, className, ...props }) => (
+  <div className={`${className} ${headerStyles.header}`} {...props}>
+    <Container className={headerStyles.headerInner}>
+      <Link className={headerStyles.homepageLink} to="/">
+        {title}
+      </Link>
+    </Container>
+  </div>
+);
 
-export default Header
+export default Header;

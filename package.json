@@ -1,14 +1,12 @@
 {
-  "name": "gatsby-starter-typescript-plus",
-  "description": "A starter kit for TypeScript-based Gatsby projects with sensible defaults.",
+  "name": "houseutils",
+  "description": "A site to help you figure out house stuff.",
   "version": "1.0.0",
-  "private": true,
-  "author": "Resi Respati <resir014@gmail.com>",
+  "author": "Josh Poole <josh@poole.haus>",
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
-  "main": "n/a",
+  "license": "GPL3",
   "scripts": {
     "build": "gatsby build",
     "clean": "rimraf public",
@@ -21,7 +19,7 @@
     "type-check": "tsc"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=12.0.0"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
@@ -33,6 +31,7 @@
     "gatsby-plugin-canonical-urls": "^2.0.12",
     "gatsby-plugin-emotion": "^4.0.6",
     "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-sharp": "^2.0.35",
     "gatsby-plugin-typescript": "^2.0.13",
     "gatsby-remark-copy-linked-files": "^2.0.12",
@@ -45,6 +44,7 @@
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.18",
     "modern-normalize": "^0.5.0",
+    "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
     "polished": "^3.2.0",
     "prism-themes": "^1.1.0",
