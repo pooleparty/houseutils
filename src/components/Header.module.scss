@@ -10,15 +10,22 @@
   flex-direction: row;
   align-items: center;
   height: 100%;
+
+  & > * {
+    margin: 0 1rem;
+  }
 }
 
-.homepage-link {
+.link {
   color: var(--colorWhite);
-  font-size: 1.5rem;
-  font-weight: 600;
 
   &:hover,
   &:focus {
     text-decoration: none;
   }
+}
+
+.homepage-link {
+  font-size: 1.5rem;
+  font-weight: 600;
 }

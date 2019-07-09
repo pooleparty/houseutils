@@ -1,0 +1,11 @@
+.mortgage-info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mortgage-info {
+  border: 1px solid red;
+  padding: var(--containerPadding);
+}

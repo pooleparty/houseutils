@@ -1,18 +1,19 @@
-import * as React from 'react'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import Header from '../components/Header'
-import LayoutRoot from '../components/LayoutRoot'
-import LayoutMain from '../components/LayoutMain'
-import './layout.scss'
+import * as React from 'react';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import Header from '../components/Header';
+import LayoutRoot from '../components/LayoutRoot';
+import LayoutMain from '../components/LayoutMain';
+import 'react-virtualized/styles.css';
+import './layout.scss';
 
 interface StaticQueryProps {
   site: {
     siteMetadata: {
-      title: string
-      description: string
-    }
-  }
+      title: string;
+      description: string;
+    };
+  };
 }
 
 const IndexLayout: React.SFC = ({ children }) => (
@@ -33,7 +34,7 @@ const IndexLayout: React.SFC = ({ children }) => (
           title={data.site.siteMetadata.title}
           meta={[
             { name: 'description', content: data.site.siteMetadata.description },
-            { name: 'keywords', content: 'house, mortgage, finance' }
+            { name: 'keywords', content: 'house, mortgage, finance' },
           ]}
         />
         <Header title={data.site.siteMetadata.title} />
@@ -41,6 +42,6 @@ const IndexLayout: React.SFC = ({ children }) => (
       </LayoutRoot>
     )}
   />
-)
+);
 
-export default IndexLayout
+export default IndexLayout;

@@ -1,13 +1,14 @@
 import * as React from 'react';
-
+import MortgageInfoComparison from '../components/MortgageInfoComparison';
+import MortgageInfoContainer from '../components/MortgageInfoContainer';
 import Page from '../components/Page';
-import Container from '../components/Container';
 import IndexLayout from '../layouts';
 
 const IndexPage = () => (
   <IndexLayout>
     <Page>
-      <Container></Container>
+      <MortgageInfoComparison />
+      <MortgageInfoContainer />
     </Page>
   </IndexLayout>
 );

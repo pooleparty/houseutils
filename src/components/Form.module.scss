@@ -1,0 +1,11 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  // grid-template-areas:
+  //   "field field field"
+  //   "buttons buttons buttons";
+}
+
+.form__buttons {
+  grid-area: 'buttons';
+}
